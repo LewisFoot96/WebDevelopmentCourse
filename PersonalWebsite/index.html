@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--English language-->
-<html lang="en">
+<html lang="en" style="background: burlywood;">
 <head>
     <!--Character set type-->
     <meta charset="UTF-8">
@@ -9,14 +9,23 @@
     <!--How it should be displayed when it first opens.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💚 Lewis</title>
+    <style>
+        p
+        {
+            background: red;
+        }
+    </style>
+    <link rel="stylesheet" href="./stylesheets/lewisstyle.css"/>
+    
 </head>
 <body>
-    <h1>Lewis Website</h1>
+    <h1 class="red-heading">Lewis Website</h1>
     <p>Test <em>Lewis</em> <strong>Paragraph</strong></p>
+    <p draggable="true">Drag <em>Lewis</em> <strong>Paragraph</strong></p>
     <hr>
     <ul>
-        <li>Lewis</li>
-        <li>Bullet</li>
+        <li class="red-heading">Lewis</li>
+        <li id="main">Bullet</li>
         <li><a href="https://www.youtube.com/">Youtube</a></li>
     </ul>
     <a href="./hobbies.html"> <img src="./images/fake-human-circle-img.png"/> </a>

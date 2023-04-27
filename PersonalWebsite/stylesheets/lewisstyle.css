@@ -1,0 +1,34 @@
+h1
+{
+    font-style: italic;
+    font-weight: 100;
+}
+
+/* Class */
+.red-heading
+{
+    color: aqua;
+}
+
+/* id */
+#main
+{
+    color: brown;
+}
+
+/* attribute tag */
+li[class]
+{
+    background: pink;
+}
+/* attribute tag specific value*/
+p[draggable="true"]
+{
+    background: orange;
+}
+
+/* Select All */
+*
+{
+    font-family: fantasy;
+}
