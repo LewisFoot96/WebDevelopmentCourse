@@ -1,19 +1,42 @@
+/*  Colour hunt gives you colour pallet ideas. */
+
+/* Can use pixles (px) and points (pt) for size, point slighlty bigger
+   1em -> 100% root of parent tag, 2em 200% etc. 
+   1rem -> 100% of root tag
+   Lots of Font properties have relative options to parents 
+   Can use google fonts to find one you like
+   You can use the google chrome developer tools to edit the CSS -> maybe a font or colour you like from a webstite?*/
+
+/* Box model: border and padding, size of tag/box does not change, part between the border and any other tag/box is the margin*/
 h1
 {
     font-style: italic;
+    font-family: 'Foldit', cursive;
     font-weight: 100;
+    font-size: 100px; 
+    text-align: right;
+    /* Border is internal to this tag, border settings go in clock wise order */
+    border: 20px solid black; 
+        border-top: 0px;
+    padding: 50px;
+    margin-bottom: 200px;
+}
+
+div
+{
+    border: 200px solid brown;
 }
 
 /* Class */
 .red-heading
 {
-    color: aqua;
+    color: olivedrab;
 }
 
 /* id */
 #main
 {
-    color: brown;
+    color: #5D3891;
 }
 
 /* attribute tag */
@@ -27,8 +50,9 @@ p[draggable="true"]
     background: orange;
 }
 
-/* Select All */
+/* Select All 
+This uses a back-up font, sans-serif*/
 *
 {
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
 }
