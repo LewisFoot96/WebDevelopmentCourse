@@ -1,0 +1,162 @@
+/*  Colour hunt gives you colour pallet ideas. */
+
+/* Can use pixles (px) and points (pt) for size, point slighlty bigger
+   1em -> 100% root of parent tag, 2em 200% etc. 
+   1rem -> 100% of root tag
+   Lots of Font properties have relative options to parents 
+   Can use google fonts to find one you like
+   You can use the google chrome developer tools to edit the CSS -> maybe a font or colour you like from a webstite?
+   You can do lots of things, inclduing copying the selector to access that tag*/
+
+/* Box model: border and padding, size of tag/box does not change, part between the border and any other tag/box is the margin*/
+
+/* Cascade: 
+1: important attribute, 
+2: type -> external css, header, inline. 
+3: Specificity: element, class, attribute and id. 
+4: Position: in file
+ */
+
+ /* Ther are 4 types of positioning: Static, Relative, Absolute and Fixed
+    - Static: default, ontop of each other
+    - Releative: relative to where it should be
+    - Abolute: position releative to the nearest ancester or top left of the page,
+               the ancestor needs the position relative attribute 
+    Fixed: Position relative to the top left corner of the browser window*/
+
+/* Z index: determines what goes ontop of what in a webpage, all elemetns have a 
+default of 0, you can change this tag attribute to put things on top of another 'z-index' */
+h1
+{
+    font-style: italic;
+    font-family: 'Foldit', cursive;
+    font-weight: 100;
+    font-size: 100px; 
+    text-align: left;
+    /* Border is internal to this tag, border settings go in clock wise order */
+    border: 20px solid black; 
+        border-top: 0px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+div
+{
+    border: 10px solid black;
+}
+
+p
+{
+    text-align: left;
+}
+
+/* Combinging selectors -> Descendant, any descendents of the class with the tag p will have this styling */
+.test-selector p
+{
+    text-align: center;
+}
+
+/* Class */
+.red-heading
+{
+    color: olivedrab;
+    /* Will override the h1 value. 
+    Further: important key word ensures this is going to be the most important rule*/
+    text-align: center !important;
+    position: fixed;
+}
+
+/* id */
+#main
+{
+    color: #5D3891;
+}
+
+/* attribute tag */
+li[class]
+{
+    background: pink;
+}
+/* attribute tag specific value*/
+p[draggable="true"]
+{
+    background: orange;
+}
+
+/* Select All 
+This uses a back-up font, sans-serif*/
+*
+{
+    font-family: fantasy, sans-serif;
+}
+
+/* Group Selector */
+h2, h3
+{
+    color: darksalmon;
+}
+
+/* Child Selector, Parent and then Child -> direct child*/
+.child-selector > p
+{
+    font-size: 100px;
+}
+
+/* Chaining -> specific. You can also combine selector combiners e.g. ancestor with chaining*/
+/* Relative positioning */
+h2.chaning#chain
+{
+    color: forestgreen;
+    position: relative;
+    top: 100px;
+    right: 50px;
+}
+
+#red-circle
+{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+h4{
+    /* Most have this set to block, which is the full width of the webpage
+       size will default to the size of their content
+       We can use an 'inline-block' as an inbetween, inline but can also set the width
+       and height */
+    display: inline;
+}
+
+h5{
+    display: inline-block;  
+}
+
+#Float-Image
+{
+    /* Float is not used that much in modern web development, really just used for 
+       wrapping text around images.  */
+    float: left;
+}
+
+footer{
+    clear: left;
+}
+
+/* There are 4 ways to make website responsive:
+   - Media Queries
+   - Flexbox
+   - Grid 
+   - Framework e.g. boostrap*/
+
+/* Media Query -> can also use min-width and combine these different break points, between sizes for example. There are lots of other media query features too.
+Can get the sizes of differenet device heights and widths and then do different CSS accordingly*/
+@media (max-width: 800px)
+{
+    /* CSS for screens below or equal to 600px wide. Can put whatever CSS you want to handle different screen sizes.*/
+    div
+    {
+        background-color: deeppink;
+        font-size: larger;
+    }
+}
