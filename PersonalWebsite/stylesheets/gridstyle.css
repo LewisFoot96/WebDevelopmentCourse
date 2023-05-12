@@ -1,0 +1,32 @@
+.container 
+{
+    display: grid;
+    /* Fractional ration, second column is twice the size of the first. Can use the auto key word, fils out avaliable space. 
+    Rows as auto try and fit the content, not the full page*/
+    /* Can use grid-auto-rows that will set number of rows based on tags. */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-rows: 1fr minmax(400px,800px); */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    height: 100vh;
+}
+
+/* Flex boxes within grid. Work well together.*/
+.grid-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+/* Can use the order attribute to prioritise */
+.two
+{
+    /* Row start, column start, row end, column end */
+    /* grid-area: 3,1,4,3; */
+    background-color: red;
+    grid-column: span 2;
+    grid-row: span 2;
+    /* WE can actually have these overlapping layout */
+}
