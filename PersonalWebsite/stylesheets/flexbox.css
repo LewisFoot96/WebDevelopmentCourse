@@ -1,0 +1,56 @@
+/* CSS Tricks has some useful info on this, cheat sheets */
+
+/* Default maxuimum width looks at maximum possible size e.g. end of text. Minimum width looks at the longest word in text */
+/* Content width < Width < flex-basis < min-widt/max-width */
+
+h1{
+    font-size: x-large;
+    font-family: fantasy;
+    background-color: aqua;
+}
+
+.container
+{ 
+    /* Flex different system with different rules. Inline, only fits to content */
+    display: flex; 
+    /* Gap between differnt components */
+    gap: 5px;
+    border: 5px solid gold;
+    flex-direction: row;    
+    /* Can also do reverse wrap, puts stuff on new line if its too long */
+    /* flex-wrap: wrap; */
+    /* Centering */
+    justify-content: center;
+    /* Fills out content with even spaces inbetween components.  */
+    justify-content: space-evenly;
+
+    /* Aliging in middle of box */
+    align-items: center;
+    height: 70vh;
+}
+
+.one{
+    background-color: rebeccapurple;
+}
+
+.two{
+    background-color: blue;
+    /* Seperately aligning */
+    align-self: flex-start;
+}
+
+.three{
+    background-color: orange;
+}
+
+/* Selecting all children of the container class. */
+.container > *{
+    /* Default flex-basis is auto, 0 is equal width */
+    flex-basis: 200px;
+
+     /* Grow and shrink settings, 1 is on 0 off, below is the default */
+     flex-grow: 0;
+     flex-shrink: 1;
+
+     /* can use short hand - flex: 1 1 0, grow, shrink and basis, this specific one can also be flex: 1; */
+}
