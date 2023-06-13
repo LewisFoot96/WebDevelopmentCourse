@@ -27,6 +27,32 @@ for(j=0;j<=2;j++)
     console.log(j);
 }
 
+// document.getElementsByTagName -> tag name.
+var heading = document.getElementsByClassName("red-heading");
+
+for (var i =0; i< heading.length;i++)
+{
+    //This is the full inner HTML, could be internal tags too. Can add tags etc. 
+    //textContent can be used for just the text. 
+    heading[i].innerHTML = "This has been changed by JavaScript";
+    heading[i].style.color = "blue";
+}
+
+// Returns one element from selector. We can combine selectors, like in CSS.
+// If there is more than one from selector just get back the first. 
+// Can find all this stuff in the DOM object documentation. 
+// Values have to be represented as strings
+//All of our styles should be in CSS not in java script.
+document.querySelector("h1").style.color = "blue";
+
+// Adding style class to p tag, can be used to toggle styling of things
+document.querySelector("p").classList.add("invisible");
+
+//Gets attributes of a tag. Can also setAttriburte to set them. 
+document.querySelector("p").attributes;
+
+alert("Java script finished.");
+
 function addition(numberA, numberB)
 {
     console.log(numberA + numberB); 
