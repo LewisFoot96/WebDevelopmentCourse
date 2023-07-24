@@ -160,3 +160,8 @@ Can get the sizes of differenet device heights and widths and then do different 
         font-size: larger;
     }
 }
+
+.invisible
+{
+    visibility: hidden;
+}
